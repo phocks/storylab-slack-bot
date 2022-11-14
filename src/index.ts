@@ -12,7 +12,7 @@ const main = async () => {
   const shuffledPeople: string[] = shuffle(people);
   const orderText: string = formatList(shuffledPeople);
 
-  const text = "Standup order: " + orderText;
+  const text = "Who should run standup?: " + orderText;
 
   const output = { text };
 
@@ -25,33 +25,6 @@ const main = async () => {
   .catch(function (error) {
     console.log(error);
   });
-
-  // const response = fetch(URL, {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({ text: "Hello!" }),
-  // }).then((r) => {
-  //   open(r.headers.get("location"));
-  //   return r.json();
-  // });
-
-  // console.log(response);
-
-  // const response = await postMessage(URL, JSON.stringify(output));
-  // console.log(response);
-
-  // const response = await fetch(URL, {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify(output),
-  // });
-  // const json = response.json();
-
-  // console.log(json);
 };
 
 main().catch((error) => {
